@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Contact = () => {
     return (
@@ -8,8 +9,11 @@ const Contact = () => {
             </div>
 
             <div className='flex justify-center items-center'>
-                <button className='rounded-full py-1 px-3 text-white mt-3 mx-1 bg-cyan-600'>BD Address</button>
-                <button className='rounded-full py-1 px-3 text-white mt-3 mx-1 bg-cyan-600'>US Address</button>
+                <Link to='bd-address' className='rounded-full py-1 px-3 text-white mt-3 mx-1 bg-cyan-600'>BD Address</Link>
+                <Link to='us-address' className='rounded-full py-1 px-3 text-white mt-3 mx-1 bg-cyan-600'>US Address</Link>
+            </div>
+            <div className='flex justify-center items-center w-full py-44'>
+                <Outlet />
             </div>
         </section>
     );
