@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import HomePage from './components/HomePage/HomePage';
 import Navbar from './components/Navbar/Navbar';
 import About from './components/About/About'
+import CoinDetail from './components/CoinDetail/CoinDetail';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/coins" element={<Coins />} />
+        <Route path="/coin-details/:id" element={ <CoinDetail/>}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={ <About/>}/>
       </Routes>
